@@ -1,0 +1,10 @@
+---
+- name: Configure web servers
+  hosts: my_hosts
+  become: true
+
+  roles:
+      - role: nginx
+  # incase u wanna change the title
+  # vars:
+  #     nginx_page_title: "Production Web Server"

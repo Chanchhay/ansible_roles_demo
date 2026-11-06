@@ -1,0 +1,8 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for nginx_install
+- name: Install NGINX package
+  ansible.builtin.apt:
+      name: nginx
+      state: present
+      update_cache: true

@@ -1,0 +1,21 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for nginx
+- name: Generate website homepage
+  ansible.builtin.template:
+      src: index.html.j2
+      dest: /var/www/html/index.html
+      mode: "0644"
+
+- name: Configure NGINX default site
+  ansible.builtin.template:
+      src: default.conf.j2
+      dest: /etc/nginx/sites-available/default
+      mode: "0644"
+  notify: Reload NGINX
+
+- name: Ensure NGINX is running
+  ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: true
