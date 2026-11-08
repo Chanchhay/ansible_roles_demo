@@ -1,0 +1,18 @@
+---
+- name: Configure development server
+  hosts: node-1
+  become: true
+
+  roles:
+      - role: nginx
+        vars:
+            nginx_page_title: "Development Site"
+
+- name: Configure testing servers
+  hosts: node-2:node-3
+  become: true
+
+  roles:
+      - role: nginx
+        vars:
+            nginx_page_title: "Testing Site"

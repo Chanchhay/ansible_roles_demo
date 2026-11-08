@@ -1,0 +1,10 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for server_report
+
+- name: Display server information
+  ansible.builtin.debug:
+      msg:
+          - "Hostname: {{ inventory_hostname }}"
+          - "OS: {{ ansible_facts['distribution'] }}"
+          - "OS Version: {{ ansible_facts['distribution_version'] }}"

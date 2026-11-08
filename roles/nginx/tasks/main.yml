@@ -1,5 +1,8 @@
 #SPDX-License-Identifier: MIT-0
 ---
+- name: Display resolved NGINX title
+  ansible.builtin.debug:
+      msg: "{{ inventory_hostname }} -> {{ nginx_page_title }}"
 # tasks file for nginx
 - name: Generate website homepage
   ansible.builtin.template:

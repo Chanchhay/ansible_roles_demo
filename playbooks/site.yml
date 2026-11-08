@@ -5,6 +5,30 @@
 
   roles:
       - role: nginx
-  # incase u wanna change the title
-  # vars:
-  #     nginx_page_title: "Production Web Server"
+#   # incase u wanna change the title
+#   vars:
+#       nginx_page_title: "Production Web Server"
+
+#  ---- update ----
+# ---
+# - name: Configure and inspect web servers
+#   hosts: my_hosts
+#   become: true
+
+#   roles:
+#       - nginx
+#       - server_report
+
+
+# ---
+# - name: Configure web servers
+#   hosts: node-1:node-2
+#   become: true
+#   roles:
+#     - nginx
+#     - server_report
+
+# - name: Inspect utility server
+#   hosts: node-3
+#   roles:
+#     - server_report

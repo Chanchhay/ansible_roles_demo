@@ -1,3 +1,4 @@
 #SPDX-License-Identifier: MIT-0
 ---
 # vars file for nginx
+# nginx_page_title: "Role Vars Site"

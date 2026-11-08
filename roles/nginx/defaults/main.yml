@@ -2,4 +2,5 @@
 # defaults file for nginx
 ---
 nginx_port: 80
-nginx_page_title: "My Ansible Role Lab"
+# nginx_page_title: "My Ansible Role Lab"
+nginx_page_title: "Default Site"
